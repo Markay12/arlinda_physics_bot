@@ -1,0 +1,22 @@
+{
+  "name": "physics_discord_bot",
+  "version": "1.0.0",
+  "description": "Bot to ask questions and mess around in discord chat with",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Markay12/arlinda_physics_bot.git"
+  },
+  "author": "Mark Ashinhust",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Markay12/arlinda_physics_bot/issues"
+  },
+  "homepage": "https://github.com/Markay12/arlinda_physics_bot#readme",
+  "dependencies": {
+    "discord.js": "^12.3.1"
+  }
+}
