@@ -1,12 +1,12 @@
 // create constant to contact with Discord servers
-const Discord = require('discord.js');
+const Discord = require('discord.js-commando');
 //create our own discord client
 const client = new Discord.Client();
 
 
-const token = "NzU4MDEyMjQwNDk3NzM3ODIy.X2ov6Q.bTb0bve736I69bCBNNETwOSgbqo";
+const token = "NzU4MDEyMjQwNDk3NzM3ODIy.X2ov6Q.iH6DklyvwBOZcu16Cn-WiXyhfXE";
 
-const PREFIX = '!'; //prefix to ask command
+const PREFIX = '$'; //prefix to ask command
 
 var version = '0.0.1'; //version name
 
@@ -52,10 +52,9 @@ client.on("guildMemberRemove", (member) =>{
 
 
 //implement prefix at the beginning of a statement
+/*
+client.on('message', (message) =>{
 
-client.on('message', message =>{
-
-    if(message.channel.id === '755470219513823362'){ //gates-of-autism chat for new members
 
     let args = message.content.substring(PREFIX.length).split(" ");
 
@@ -79,8 +78,7 @@ client.on('message', message =>{
 
         case 'roles':
 
-            message.channel.sendMessage('Main Roles Inlclude:\nHuge Cock\nServer Booster\nNotes Man\nMight be a TA?\nWell Endowed Individuals\nRead Karl Marx once"
-	    				" in freshman year\nBots\nOnline");
+            message.channel.sendMessage("Main Roles Inlclude:\nHuge Cock\nServer Booster\nNotes Man\nMight be a TA?\nWell Endowed Individuals\nRead Karl Marx once in freshman year\nBots\nOnline");
 
 
             break;
@@ -101,7 +99,7 @@ client.on('message', message =>{
 
         case 'porn':
 
-		if(message.channel.id === '755470219513823362'){ //gates-of-autism chat for new members
+		if(message.channel.id === '758007006886887465'){ //gates-of-autism chat for new members
 
             	 	var num = (Math.floor(Math.random() * 10));
 
@@ -128,7 +126,9 @@ client.on('message', message =>{
 
 			message.channel.sendMessage("1: Here’s a word of advice for you: try not to reflect on your failures and regrets in life while you’re trying to jerk it. I know, it’s kinda obvious, but if you’re like me it can be hard sometimes. I like to choke the chicken the same way I like to sleep: on the bed, eyes closed, masturbating furiously to the idea of titties and traps galore.\n2: No lube, no mercy; the way life ought to be.\n3: Even so, it’s hard to enjoy such voluptuous things when a lifetime of failure and regret is trying to block the view.\n4: What’s a man to do? Little Richard’s still up and ready, the giz rag’s good to go, yet here I am looking back at the uninterrupted stream of missed opportunities, squandered resources, and easily-avoided catastrophes that I have made my life into. The wank’s been ruined, I feel more alone than ever, but the worst part is that I still need to bust a nut!\n5: Then, a moment of brilliance! I can jerk off to one of the gals that took part in my personal, unending comedy of errors! Maybe I could go for that gal who genuinely enjoyed my company until I got too… aggressive… in trying to bust out of the friend zone. Boy golly that’s still a painful memory! Like, physically painful. This would probably be easier if I was a masochist, but a man has to make do with the hand he’s got from day to day.\n6: Mayhaps one of my old teachers would work better, like that Jewish bird who watched me do the Hitler salute during the pledge of allegance. Nah, she’s a cunt with a face made of botox and the imitation of a human soul. Besides, I don’t regret doing that anyway.\n7: Maybe I could just get my mind off the whole buissness anyway. You know, write a lil story or something, make a few people laugh, then get back down to buissness. Yeah, that sounds about right.");
 
-	            	break;
+            break;
+            
+        } else { break; }
 
         case 'clear':
 
@@ -150,9 +150,34 @@ client.on('message', message =>{
 
     }
 
-}
 
 }); // end of client message for basic commands
+
+*/
+
+// create registry to have separate class files for execution
+client.registry.registerGroup('random', 'Radnom');
+client.registry.registerCommandsIn(__dirname + "/commands");
+
+client.on('message', (message) => {
+
+    let args = message.content.substring(PREFIX.length).split(" ");
+
+    switch(args[0]){
+
+        case 'info':
+            if(args[1] === 'version'){
+                message.reply('Version ' + version + ' -  Developed by Markay#5500');
+            } else {
+                message.channel.send('ERROR: Invalid argument');
+            }
+            break; 
+
+    }
+
+    
+
+});
 
 /*
 client.on('message', msg => {
@@ -161,4 +186,5 @@ client.on('message', msg => {
 */
 
 // logs the bot in using the token
-client.login(process.env.BOT_TOKEN);
+// client.login(process.env.token);
+client.login('NzU4MDEyMjQwNDk3NzM3ODIy.X2ov6Q.iH6DklyvwBOZcu16Cn-WiXyhfXE');
