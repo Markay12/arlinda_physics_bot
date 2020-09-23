@@ -10,10 +10,11 @@ const PREFIX = '$'; //prefix to ask command
 
 var version = '0.0.1'; //version name
 
+/*
 const newUser = new Discord.Collection();
 
 const listUsers = new Discord.Collection();
-
+*/
 
 //log to terminal when on
 
@@ -22,6 +23,8 @@ client.on('ready',  () => {
     console.log(`Logged in as ${client.user.tag}!`);
 
 });
+
+/*
 
 //welcome message for new users to the server
 client.on("guildMemberAdd", (member) =>{  // adds user name to server
@@ -48,7 +51,6 @@ client.on("guildMemberAdd", (member) =>{  // adds user name to server
 client.on("guildMemberRemove", (member) =>{
     if(newUsers.has(member.id)) newUsers.delete(member.id);
 });
-
 
 
 //implement prefix at the beginning of a statement
@@ -156,7 +158,7 @@ client.on('message', (message) =>{
 */
 
 // create registry to have separate class files for execution
-client.registry.registerGroup('random', 'Radnom');
+client.registry.registerGroup('random', 'Random');
 client.registry.registerCommandsIn(__dirname + "/commands");
 
 client.on('message', (message) => {
