@@ -158,10 +158,10 @@ function divideCommand(arguments, receivedMessage){
         return
 
     }
-    let quotient = 1
+    let quotient = arguments.split[" "]
     arguments.forEach((value) => {
 
-        quotient = quotient / parseFloat(value)
+        quotient[1] = quotient / parseFloat(value)
 
     })
     receivedMessage.reply("The quotient of " + arguments.join("/") + " divided together is: " +quotient.toString())
