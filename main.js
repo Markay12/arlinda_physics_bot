@@ -15,7 +15,24 @@ client.on('message', (receivedMessage) => {
     if (receivedMessage.content.startsWith("$")) {
         processCommand(receivedMessage)
     }
+
 })
+
+function faradOn(receivedMessage) {
+
+    client.user.setPresence({
+
+        status: "online",
+        game: {
+
+            name: "Arlinda Hill",
+            type: "WATCHING"
+
+        }
+
+    });
+
+}
 
 function advice(arguments, receivedMessage) {
 
@@ -121,7 +138,9 @@ function processCommand(receivedMessage) {
     } else if (primaryCommand == "help") {
         help(arguments, receivedMessage)
     } else if (primaryCommand == "files") {
-	    files(arguments, receivedMessage)
+        files(arguments, receivedMessage)
+    } else if (primaryCommand == "faradOn") {
+        faradOn(receivedMessage)
     } else {
         receivedMessage.channel.send("I don't understand the command. Try `$help` or `$multiply`")
     }
