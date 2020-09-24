@@ -164,7 +164,7 @@ function divideCommand(arguments, receivedMessage){
         quotient = quotient / parseFloat(value)
 
     })
-    receivedMessage.reply("The quotient of " + arguments.join(" ") + " divided together is: " +quotient.toString())
+    receivedMessage.reply("The quotient of " + arguments.join("/") + " divided together is: " +quotient.toString())
 
 }
 
