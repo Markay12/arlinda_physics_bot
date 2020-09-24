@@ -20,18 +20,7 @@ client.on('message', (receivedMessage) => {
 
 function faradOn(receivedMessage) {
 
-    client.user.setPresence({
-
-        status: "online",
-        game: {
-
-            name: "Arlinda Hill",
-            type: "WATCHING"
-
-        }
-
-    });
-
+    client.user.setActivity('Arlinda Hill', { type: 'WATCHING' });
 }
 
 function advice(arguments, receivedMessage) {
