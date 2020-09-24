@@ -2,13 +2,13 @@ const Discord = require('discord.js')
 const client = new Discord.Client()
 
 client.on('message', (receivedMessage) => {
-    
+
     console.log("Farad has entered the server")
 
     if (receivedMessage.author == client.user) { // Prevent bot from responding to its own messages
         return
     }
-    
+
     if (receivedMessage.content.startsWith("$")) {
         processCommand(receivedMessage)
     }
@@ -17,7 +17,7 @@ client.on('message', (receivedMessage) => {
 function advice(arguments, receivedMessage) {
 
     if (arguments == "grug")
-    
+
     {
         receivedMessage.channel.send("1: Here’s a word of advice for you: try not to reflect on your failures and regrets in life while you’re trying to jerk it. I know, it’s kinda obvious, but if you’re like me it can be hard sometimes. I like to choke the chicken the same way I like to sleep: on the bed, eyes closed, masturbating furiously to the idea of titties and traps galore.\n2: No lube, no mercy; the way life ought to be.\n3: Even so, it’s hard to enjoy such voluptuous things when a lifetime of failure and regret is trying to block the view.\n4: What’s a man to do? Little Richard’s still up and ready, the giz rag’s good to go, yet here I am looking back at the uninterrupted stream of missed opportunities, squandered resources, and easily-avoided catastrophes that I have made my life into. The wank’s been ruined, I feel more alone than ever, but the worst part is that I still need to bust a nut!\n5: Then, a moment of brilliance! I can jerk off to one of the gals that took part in my personal, unending comedy of errors! Maybe I could go for that gal who genuinely enjoyed my company until I got too… aggressive… in trying to bust out of the friend zone. Boy golly that’s still a painful memory! Like, physically painful. This would probably be easier if I was a masochist, but a man has to make do with the hand he’s got from day to day.\n6: Mayhaps one of my old teachers would work better, like that Jewish bird who watched me do the Hitler salute during the pledge of allegance. Nah, she’s a cunt with a face made of botox and the imitation of a human soul. Besides, I don’t regret doing that anyway.\n7: Maybe I could just get my mind off the whole buissness anyway. You know, write a lil story or something, make a few people laugh, then get back down to buissness. Yeah, that sounds about right.")
     }
@@ -49,7 +49,7 @@ function search(arguments, receivedMessage){
 
 function youtube(arguments, receivedMessage){
 
-    
+
     if (arguments == "general") { receivedMessage.channel.send("https://www.youtube.com") }
     else if (arguments != "")
     {
@@ -83,9 +83,9 @@ function help(arguments, receivedMessage){
 
 function files(arguments, receivedMessage) {
 
-    if (arguments == "phy"){ receivedMessage.channel.send("Link for file acces for Notes and Homework Assistance: https://1drv.ms/u/s!At0fPM2UwYIZoQ_84RiiiicVIKEW?e=JYxifV") }
+    if (arguments == "phy"){ receivedMessage.channel.send("Link for file access including Notes and Homework Assistance: https://1drv.ms/u/s!At0fPM2UwYIZoQ_84RiiiicVIKEW?e=JYxifV") }
     else { receivedMessage.channel.send("Make sure to specify which notes --> usage: $files phy") }
-    
+
 
 
 }
@@ -99,7 +99,7 @@ function processCommand(receivedMessage) {
     console.log("Command received: " + primaryCommand)
     console.log("Arguments: " + arguments) // There may not be any arguments
 
-    
+
     if (primaryCommand == "multiply") {
         multiplyCommand(arguments, receivedMessage)
     } else if (primaryCommand == "advice") {
@@ -125,7 +125,7 @@ function multiplyCommand(arguments, receivedMessage) {
         receivedMessage.channel.send("Not enough values to multiply. Try `$multiply 2 4 10` or `$multiply 5.2 7`")
         return
     }
-    let product = 1 
+    let product = 1
     arguments.forEach((value) => {
         product = product * parseFloat(value)
     })
