@@ -2,6 +2,9 @@ const Discord = require('discord.js')
 const client = new Discord.Client()
 
 client.on('message', (receivedMessage) => {
+    
+    console.log("Farad has entered the server")
+
     if (receivedMessage.author == client.user) { // Prevent bot from responding to its own messages
         return
     }
@@ -78,6 +81,13 @@ function help(arguments, receivedMessage){
 
 }
 
+function files(recievedMessage) {
+
+	recievedMessage.channel.send("Here is a link to access files for this class: https://1drv.ms/u/s!At0fPM2UwYIZoQ_84RiiiicVIKEW?e=JYxifV")
+
+
+}
+
 function processCommand(receivedMessage) {
     let fullCommand = receivedMessage.content.substr(1) // Remove the leading exclamation mark
     let splitCommand = fullCommand.split(" ") // Split the message up in to pieces for each space
@@ -100,6 +110,8 @@ function processCommand(receivedMessage) {
         youtube(arguments, receivedMessage)
     } else if (primaryCommand == "help") {
         help(arguments, receivedMessage)
+    } else if (primaryCommand == "files") {
+	    files(recievedMessage)
     } else {
         receivedMessage.channel.send("I don't understand the command. Try `$help` or `$multiply`")
     }
