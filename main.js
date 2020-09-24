@@ -81,9 +81,11 @@ function help(arguments, receivedMessage){
 
 }
 
-function files(recievedMessage) {
+function files(arguments, receivedMessage) {
 
-	recievedMessage.channel.send("Here is a link to access files for this class: https://1drv.ms/u/s!At0fPM2UwYIZoQ_84RiiiicVIKEW?e=JYxifV")
+    if (arguments == "phy"){ receivedMessage.channel.send("Link for file acces for Notes and Homework Assistance: https://1drv.ms/u/s!At0fPM2UwYIZoQ_84RiiiicVIKEW?e=JYxifV") }
+    else { receivedMessage.channel.send("Make sure to specify which notes --> usage: $files phy") }
+    
 
 
 }
@@ -111,7 +113,7 @@ function processCommand(receivedMessage) {
     } else if (primaryCommand == "help") {
         help(arguments, receivedMessage)
     } else if (primaryCommand == "files") {
-	    files(recievedMessage)
+	    files(arguments, receivedMessage)
     } else {
         receivedMessage.channel.send("I don't understand the command. Try `$help` or `$multiply`")
     }
