@@ -130,6 +130,8 @@ function processCommand(receivedMessage) {
         files(arguments, receivedMessage)
     } else if (primaryCommand == "faradOn") {
         faradOn(receivedMessage)
+    } else if (primaryCommand == "divide") {
+        divideCommand(arguments, receivedMessage)
     } else {
         receivedMessage.channel.send("I don't understand the command. Try `$help` or `$multiply`")
     }
@@ -146,6 +148,24 @@ function multiplyCommand(arguments, receivedMessage) {
         product = product * parseFloat(value)
     })
     receivedMessage.reply("The product of " + arguments + " multiplied together is: " + product.toString())
+}
+
+function divideCommand(arguments, receivedMessage){
+
+    if(arguments.length < 2) {
+
+        receivedMessage.channel.send("Not enough values to divide. Try `$divide 2 4 10` or `$divide 5.2 7`")
+        return
+
+    }
+    let quotient = 1
+    arguments.forEach((value) => {
+
+        quotient = quotient / parseFloat(value)
+
+    })
+    receivedMessage.reply("The quotient of " + arguments.join(" ") + " divided together is: " +quotient.toString())
+
 }
 
 
