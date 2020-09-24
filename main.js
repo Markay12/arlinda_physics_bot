@@ -69,6 +69,12 @@ function help(arguments, receivedMessage){
         receivedMessage.author.send("Hi there! My name is Farad and I'm here to help out with Physics131!\nHere are some of my basic commands!\n\n$multiply [number] [number]   --> You can multiply multiple numbers however, you cannot use this command without 2\n$advice grug  --> lists some great advice from user Grug Untermench#3336\n$search [<query>]  --> Use this to search anything without having to open a browser\n$links  --> This gives some helpful links for the class including Canvas, Zoom lecture and Recitation links\n$youtube [<topic>]  --> Gives link to any youtube search, use '$youtube' to just go to youtube.com\n\n\nIf you have any further questions or would like another command to be implemented contact Markay#5500")
 
     }
+    else
+    {
+
+        receivedMessage.reply("Sorry dude. That is the wrong way to use me. Try using $help commands")
+
+    }
 
 }
 
@@ -113,4 +119,4 @@ function multiplyCommand(arguments, receivedMessage) {
 }
 
 
-client.login('NzU4MDEyMjQwNDk3NzM3ODIy.X2ov6Q.iH6DklyvwBOZcu16Cn-WiXyhfXE');
+client.login(process.env.BOT_TOKEN);
