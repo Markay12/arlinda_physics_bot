@@ -18,6 +18,8 @@
   "homepage": "https://github.com/Markay12/arlinda_physics_bot#readme",
   "dependencies": {
     "discord.js": "^12.3.1",
-    "discord.js-commando": "^0.10.0"
+    "discord.js-commando": "^0.10.0",
+    "guild": "^1.2.2",
+    "random": "^2.2.0"
   }
 }
