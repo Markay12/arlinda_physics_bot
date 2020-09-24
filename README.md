@@ -1,4 +1,5 @@
-# arlinda_physics_bot
+# **Physics 131 Discord Bot**
+# FARAD1
 Physics Discord Server Bot
 
 *Written by: Mark Ashinhust*
