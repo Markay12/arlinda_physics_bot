@@ -175,7 +175,6 @@ function Farad(arguments, receivedMessage){
     if(arguments.length > 1){
 
         var random = 0;
-        splitArgs = arguments.split(" ")
 
         if (random == 0){
             receivedMessage.channel.send("How would I know you lousy son of a bitch")
