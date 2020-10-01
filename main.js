@@ -172,9 +172,9 @@ function divideCommand(arguments, receivedMessage){
 
 function Farad(arguments, receivedMessage){
 
-    if(arguments.length > 1){
+    if(arguments.length > 0){
 
-        var randomNum = Math.floor((Math.random() * 3) + 1)
+        var randomNum = Math.floor((Math.random() * 3))
 
         if (randomNum == 0)
         {
