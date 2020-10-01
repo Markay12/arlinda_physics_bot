@@ -132,6 +132,8 @@ function processCommand(receivedMessage) {
         faradOn(receivedMessage)
     } else if (primaryCommand == "divide") {
         divideCommand(arguments, receivedMessage)
+    } else if (primaryCommand == "Farad" || primaryCommand == "farad"){
+        Farad(arguments, receivedMessage)
     } else {
         receivedMessage.channel.send("I don't understand the command. Try `$help` or `$multiply`")
     }
@@ -165,6 +167,27 @@ function divideCommand(arguments, receivedMessage){
 
     })
     receivedMessage.reply("The quotient of " + arguments.join("/") + " divided together is: " +quotient.toString())
+
+}
+
+function Farad(arguments, receivedMessage){
+
+    if(arguments.length > 1){
+
+        let random = 0;
+        splitArgs = arguments.split(" ")
+
+        if (random == 0){
+            receivedMessage.channel.send("How would I know you lousy son of a bitch")
+        }
+
+    }
+    else
+    {
+
+        receivedMessage.reply("Ask me a question... ")
+
+    }
 
 }
 
