@@ -174,7 +174,7 @@ function Farad(arguments, receivedMessage){
 
     if(arguments.length > 1){
 
-        let random = 0;
+        var random = 0;
         splitArgs = arguments.split(" ")
 
         if (random == 0){
