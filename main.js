@@ -174,21 +174,21 @@ function Farad(arguments, receivedMessage){
 
     if(arguments.length > 0){
 
-        var randomNum = Math.floor((Math.random() * 3))
+        var randomNum = Math.floor((Math.random() * 3) + 1)
 
-        if (randomNum == 0)
+        if (randomNum == 1)
         {
 
             receivedMessage.channel.send("How would I know you lousy son of a bitch")
 
         }
-        if (randomNum == 1)
+        if (randomNum == 2)
         {
 
             receivedMessage.channel.send("Wouldn't you like to know weather boy")
 
         }
-        if (randomNum == 2)
+        if (randomNum == 3)
         {
 
             receivedMessage.channel.send("You're an idiot")   
