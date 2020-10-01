@@ -176,19 +176,11 @@ function Farad(arguments, receivedMessage){
 
         var randomNum = Math.floor((Math.random() * 7) + 1)
 
-        if (randomNum == 1){ receivedMessage.channel.send("How would I know you lousy son of a bitch") }
-        if (randomNum == 2){ receivedMessage.channel.send("Wouldn't you like to know weather boy") }
-        if (randomNum == 3){ receivedMessage.channel.send("You're an idiot") }
-        if (randomNum == 4){ receivedMessage.channel.send("Quiet now, don’t ask no questions") }
-        if (randomNum == 5){ receivedMessage.channel.send("SCREW IT! JUST… SCREW IT! NOTHING IS POSSIBLE. YES YOU CAN’T.") }
-        if (randomNum == 6){ 
-            receivedMessage.channel.send("Listen man, you’ll need to contact our testicle support hotline at (518)-221-9455. The guy is an omnipotent sea-god, but he’ll only help you if you can convince him that you’re Arnold Swartzenegger. Good luck.") 
-        }
-        if (randomNum == 7){ 
+        var responses = ["How would I know you lousy son of a bitch", "Wouldn't you like to know weather boy", "You're an idiot", "Quiet now, don’t ask no questions", "SCREW IT! JUST… SCREW IT! NOTHING IS POSSIBLE. YES YOU CAN’T.",
+        "Listen man, you’ll need to contact our testicle support hotline at (518)-221-9455. The guy is an omnipotent sea-god, but he’ll only help you if you can convince him that you’re Arnold Swartzenegger. Good luck.",
+        "Anything’s possible if you believe, baby. If it’s too hard for your reptilian brain to believe in, try taking some LSD. It makes a lot of things easier to swallow, believe me."]
 
-            receivedMessage.channel.send("Anything’s possible if you believe, baby. If it’s too hard for your reptilian brain to believe in, try taking some LSD. It makes a lot of things easier to swallow, believe me.")
-
-         }
+        receivedMessage.channel.send(responses[randomNum])
         
 
         
