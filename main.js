@@ -174,11 +174,7 @@ function Farad(arguments, receivedMessage){
 
     if(arguments.length > 1){
 
-        var random = 0;
-
-        if (random == 0){
-            receivedMessage.channel.send("How would I know you lousy son of a bitch")
-        }
+        receivedMessage.channel.send("How would I know you lousy son of a bitch")
 
     }
     else
