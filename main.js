@@ -134,7 +134,7 @@ function processCommand(receivedMessage) {
         divideCommand(arguments, receivedMessage)
     } else if (primaryCommand == "Farad" || primaryCommand == "farad"){
         Farad(arguments, receivedMessage)
-    } else if (primaryCommand == "sourceCode" || "source"){
+    } else if (primaryCommand == "sourceCode"){
         git(arguments, receivedMessage)
     } else if (primaryCommand == "based"){
         based(arguments, receivedMessage)
