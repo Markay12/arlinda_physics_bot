@@ -198,11 +198,5 @@ function Farad(arguments, receivedMessage){
 }
 
 
-function sendPorn(arguments, receivedMessage){
-
-    
-    
-}
-
 
 client.login(process.env.BOT_TOKEN);
