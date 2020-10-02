@@ -174,17 +174,19 @@ function Farad(arguments, receivedMessage){
 
     if(arguments.length > 0){
 
-        var randomNum = Math.floor((Math.random() * 7) + 1)
+        var randomNum = Math.floor((Math.random() * 16) + 1)
 
         var responses = ["How would I know you lousy son of a bitch", "Wouldn't you like to know weather boy", "You're an idiot", "Quiet now, don’t ask no questions", "SCREW IT! JUST… SCREW IT! NOTHING IS POSSIBLE. YES YOU CAN’T.",
         "Listen man, you’ll need to contact our testicle support hotline at (518)-221-9455. The guy is an omnipotent sea-god, but he’ll only help you if you can convince him that you’re Arnold Swartzenegger. Good luck.",
-        "Anything’s possible if you believe, baby. If it’s too hard for your reptilian brain to believe in, try taking some LSD. It makes a lot of things easier to swallow, believe me."]
+        "Anything’s possible if you believe, baby. If it’s too hard for your reptilian brain to believe in, try taking some LSD. It makes a lot of things easier to swallow, believe me.",
+        "Sometimes the answer is to ball up and cry. Don’t take no for an answer, just let all the liquids flow. Tears, snot, spit, piss, the more wet you are the more wet reality is to see to your needs.",
+        "Daddy said I’m not allowed to talk to black people.", "Nobody cares about your problems. Consume, obey, reproduce, etc.", "Why do you people have to bother me every time you stub a toe? What happened to blaming all of your problems on the Jews, eh? Go back to tradition.",
+        "Gasoline is a hell of a drug. Try it, it’s fun.", "*pulls out uno reverse card*\nNo you...", "https://www.youtube.com/watch?v=g1RNoDo8uNI&list=OLAK5uy_nSyKjw3vr9z4GjOGP7xWzSoTo_Rjs5VH0&index=8",
+        "Suicide: It’s your choice", "Read a book, maybe it’ll explain all of life’s mysteries to you. I’d recommend Go the Fuck to Sleep by somebody or other."]
 
         receivedMessage.channel.send(responses[randomNum])
+        receivedMessage.reply(responses.length)
         
-
-        
-
     }
     else
     {
@@ -193,6 +195,13 @@ function Farad(arguments, receivedMessage){
 
     }
 
+}
+
+
+function sendPorn(arguments, receivedMessage){
+
+    
+    
 }
 
 
