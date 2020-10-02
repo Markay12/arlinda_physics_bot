@@ -136,6 +136,9 @@ function processCommand(receivedMessage) {
         Farad(arguments, receivedMessage)
     } else if (primaryCommand == "sourceCode" || "source"){
         git(arguments, receivedMessage)
+    } else if (primaryCommand == "based")
+    {
+        based(arguments, receivedMessage)
     } else {
         receivedMessage.channel.send("I don't understand the command. Try `$help` or `$multiply`")
     }
@@ -202,6 +205,14 @@ function git(arguments, receivedMessage)
 {
 
     receivedMessage.author.send("\n\nHere is the link to the github repo --> https://github.com/Markay12/arlinda_physics_bot\n\n Let me know if you want any extra functionality\nYou shouldn't be able to change anything, but you can fork it and work on something if you wish\n\nWritten in Node JS and works with a large amount of functions\n\nContact Markay#5500 for assistance :smile:")
+
+}
+
+function based(arguments, receivedMessage)
+{
+
+    receivedMessage.channel.send("||||||||||||||||||||||||||||||||||||||||||||\n////////////////////////////////////////////\n--------------------------------------------\n\n" + arguments.join(" ") + " is based AF\n\n||||||||||||||||||||||||||||||||||||||||||||\n////////////////////////////////////////////\n--------------------------------------------\n\n")
+                                                                                    
 
 }
 
