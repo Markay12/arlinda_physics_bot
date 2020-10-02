@@ -185,7 +185,6 @@ function Farad(arguments, receivedMessage){
         "Suicide: It’s your choice", "Read a book, maybe it’ll explain all of life’s mysteries to you. I’d recommend Go the Fuck to Sleep by somebody or other."]
 
         receivedMessage.channel.send(responses[randomNum])
-        receivedMessage.reply(responses.length)
         
     }
     else
@@ -196,7 +195,6 @@ function Farad(arguments, receivedMessage){
     }
 
 }
-
 
 
 client.login(process.env.BOT_TOKEN);
