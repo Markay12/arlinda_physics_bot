@@ -207,7 +207,8 @@ function git(arguments, receivedMessage)
     {
         receivedMessage.author.send("\n\nHere is the link to the github repo --> https://github.com/Markay12/arlinda_physics_bot\n\n Let me know if you want any extra functionality\nYou shouldn't be able to change anything, but you can fork it and work on something if you wish\n\nWritten in Node JS and works with a large amount of functions\n\nContact Markay#5500 for assistance :smile:")
     }
-    
+    else { receivedMessage.author.send("Wrong command") }
+
 }
 
 function based(arguments, receivedMessage)
@@ -216,7 +217,13 @@ function based(arguments, receivedMessage)
     if (arguments.length > 0)
     {
         receivedMessage.channel.send("||||||||||||||||||||||||||||||||||||||||||||\n////////////////////////////////////////////\n--------------------------------------------\n\n" + arguments.join(" ") + " is based AF\n\n||||||||||||||||||||||||||||||||||||||||||||\n////////////////////////////////////////////\n--------------------------------------------\n\n")
-    }                                                                              
+    }                  
+    else
+    {
+
+        receivedMessage.channel.send("Who is based AF?")
+
+    }                                                            
 
 }
 
